@@ -49,6 +49,8 @@ SOFTWARE.
 int main(void)
 {
   int i = 0;
+  int Button = 0;
+  /*  Uloha 1
        RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
        GPIOA->MODER |=0b01<<5*2;
        GPIOA->OTYPER &=~(0b1<<5);
@@ -60,7 +62,15 @@ int main(void)
        GPIOA->ODR ^=0b1<<5;
        GPIOA->ODR ^=0b1<<5;
        GPIOA->BSRRL |=0b1<<5;
-       GPIOA->BSRRH |=0b1<<5;
+       GPIOA->BSRRH |=0b1<<5;*/
+
+     // Uloha2
+         RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOC, ENABLE);
+         GPIOC->MODER &= ~(0b11 << 13*2);
+         GPIOC->OTYPER &= ~(0b1 << 13);
+         GPIOC->PUPDR &= ~(0b11 << 13*2);
+
+
   /**
   *  IMPORTANT NOTE!
   *  See the <system_*.c> file and how/if the SystemInit() function updates 
@@ -83,7 +93,8 @@ int main(void)
 
   /* Infinite loop */
   while (1)
-  {
+  {    // Uloha 2
+	  Button = ((GPIOC->IDR)  & 0b01 << 13 >> 13);
 	i++;
   }
   return 0;
