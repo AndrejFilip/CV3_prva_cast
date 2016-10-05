@@ -50,6 +50,8 @@ int main(void)
 {
   int i = 0;
   int Button = 0;
+  int pom1 = 0;
+  int pom2 = 0;
     //Uloha 1
        RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
        GPIOA->MODER |=0b01<<5*2;
@@ -106,7 +108,7 @@ int main(void)
 	   }*/
 
 	  //uloha 3_2
-	  Button  = ((GPIOC -> IDR) & 0b1<<13 ) >> 13;
+	 /* Button  = ((GPIOC -> IDR) & 0b1<<13 ) >> 13;
 
 	    	  if(Button){
 
@@ -117,7 +119,16 @@ int main(void)
 	    		 GPIOA->ODR |=(0b1<<5);
 
 
-	    	  }
+	    	  }*/
+
+	  //uloha 3_3
+	  pom1=pom2;
+	      	    pom2= ((GPIOC -> IDR) & 0b1<<13 ) >> 13;
+	      	    if ((pom1 == 1)&&(pom2 == 0))
+	      	        	{
+
+	      	        		GPIOA->ODR ^=0b1<<5;
+	      	        	}
 	i++;
   }
   return 0;

@@ -1859,12 +1859,12 @@ LOAD c:/program files (x86)/atollic/truestudio for arm 6.0.0/armtools/bin/../lib
                 0x00000164       0x1d c:/program files (x86)/atollic/truestudio for arm 6.0.0/armtools/bin/../lib/gcc/arm-atollic-eabi/5.3.1/armv7-m/crtn.o
 OUTPUT(CV3_prva_cast.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x13d7
+.debug_info     0x00000000     0x13f3
  .debug_info    0x00000000      0xa29 Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.o
- .debug_info    0x00000a29      0x2b3 src\main.o
- .debug_info    0x00000cdc       0x60 src\startup_stm32l1xx_hd.o
- .debug_info    0x00000d3c      0x133 src\stm32l1xx_it.o
- .debug_info    0x00000e6f      0x568 src\system_stm32l1xx.o
+ .debug_info    0x00000a29      0x2cf src\main.o
+ .debug_info    0x00000cf8       0x60 src\startup_stm32l1xx_hd.o
+ .debug_info    0x00000d58      0x133 src\stm32l1xx_it.o
+ .debug_info    0x00000e8b      0x568 src\system_stm32l1xx.o
 
 .debug_abbrev   0x00000000      0x4e7
  .debug_abbrev  0x00000000      0x1e7 Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.o
@@ -1892,21 +1892,21 @@ OUTPUT(CV3_prva_cast.elf elf32-littlearm)
  .debug_ranges  0x00000178       0x50 src\stm32l1xx_it.o
  .debug_ranges  0x000001c8       0x20 src\system_stm32l1xx.o
 
-.debug_line     0x00000000      0xb5f
+.debug_line     0x00000000      0xb68
  .debug_line    0x00000000      0x521 Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.o
- .debug_line    0x00000521      0x1c1 src\main.o
- .debug_line    0x000006e2       0x7c src\startup_stm32l1xx_hd.o
- .debug_line    0x0000075e      0x1e7 src\stm32l1xx_it.o
- .debug_line    0x00000945      0x21a src\system_stm32l1xx.o
+ .debug_line    0x00000521      0x1ca src\main.o
+ .debug_line    0x000006eb       0x7c src\startup_stm32l1xx_hd.o
+ .debug_line    0x00000767      0x1e7 src\stm32l1xx_it.o
+ .debug_line    0x0000094e      0x21a src\system_stm32l1xx.o
 
-.debug_str      0x00000000      0x8fd
+.debug_str      0x00000000      0x907
  .debug_str     0x00000000      0x6a2 Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.o
                                 0x73b (size before relaxing)
- .debug_str     0x000006a2       0xb3 src\main.o
-                                0x255 (size before relaxing)
- .debug_str     0x00000755       0xa6 src\stm32l1xx_it.o
+ .debug_str     0x000006a2       0xbd src\main.o
+                                0x25f (size before relaxing)
+ .debug_str     0x0000075f       0xa6 src\stm32l1xx_it.o
                                 0x207 (size before relaxing)
- .debug_str     0x000007fb      0x102 src\system_stm32l1xx.o
+ .debug_str     0x00000805      0x102 src\system_stm32l1xx.o
                                 0x366 (size before relaxing)
 
 .comment        0x00000000       0x7e
