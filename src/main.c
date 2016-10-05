@@ -50,13 +50,13 @@ int main(void)
 {
   int i = 0;
   int Button = 0;
-  /*  Uloha 1
+    //Uloha 1
        RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
        GPIOA->MODER |=0b01<<5*2;
        GPIOA->OTYPER &=~(0b1<<5);
        GPIOA->PUPDR  |=0b01<<5*2;
        GPIOA->OSPEEDR &=~(0b11<<5*2);
-
+/*
        GPIOA->ODR |=0b1<<5;
        GPIOA->ODR &=~(0b1<<5);
        GPIOA->ODR ^=0b1<<5;
@@ -94,7 +94,16 @@ int main(void)
   /* Infinite loop */
   while (1)
   {    // Uloha 2
-	  Button = ((GPIOC->IDR)  & 0b01 << 13 >> 13);
+	//  Button = ((GPIOC->IDR)  & 0b01 << 13 >> 13);
+
+	  /*uloha3_1*/
+	   for(i = 0;i < 100000;i++){
+	   	 if(i < 50000){
+	   	   GPIOA->ODR |=0b1<<5;
+	   		  }
+	   		  else
+	   	   GPIOA->ODR &=~(0b1<<5);
+	   }
 	i++;
   }
   return 0;
