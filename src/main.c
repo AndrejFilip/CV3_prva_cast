@@ -96,14 +96,28 @@ int main(void)
   {    // Uloha 2
 	//  Button = ((GPIOC->IDR)  & 0b01 << 13 >> 13);
 
-	  /*uloha3_1*/
-	   for(i = 0;i < 100000;i++){
+	  //uloha3_1
+	 /*  for(i = 0;i < 100000;i++){
 	   	 if(i < 50000){
 	   	   GPIOA->ODR |=0b1<<5;
 	   		  }
 	   		  else
 	   	   GPIOA->ODR &=~(0b1<<5);
-	   }
+	   }*/
+
+	  //uloha 3_2
+	  Button  = ((GPIOC -> IDR) & 0b1<<13 ) >> 13;
+
+	    	  if(Button){
+
+	    		GPIOA->ODR &= ~(0b1<<5);
+	    		}
+	    	  else
+	    	  {
+	    		 GPIOA->ODR |=(0b1<<5);
+
+
+	    	  }
 	i++;
   }
   return 0;
