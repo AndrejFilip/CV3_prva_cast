@@ -55,6 +55,12 @@ int main(void)
        GPIOA->PUPDR  |=0b01<<5*2;
        GPIOA->OSPEEDR &=~(0b11<<5*2);
 
+       GPIOA->ODR |=0b1<<5;
+       GPIOA->ODR &=~(0b1<<5);
+       GPIOA->ODR ^=0b1<<5;
+       GPIOA->ODR ^=0b1<<5;
+       GPIOA->BSRRL |=0b1<<5;
+       GPIOA->BSRRH |=0b1<<5;
   /**
   *  IMPORTANT NOTE!
   *  See the <system_*.c> file and how/if the SystemInit() function updates 
